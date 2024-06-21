@@ -10,3 +10,13 @@ whitenoise==6.5.0
 psycopg2==2.9.6  # or mysqlclient==2.1.1 if using MySQL
 requests==2.31.0
 python-decouple==3.8
+virtualenv==20.23.0
+virtualenv-clone==0.5.7
+virtualenvwrapper==4.8.4
+virtualenvwrapper-win==1.2.7
+whitenoise==6.5.0
+six==1.16.0
+python-magic==0.4.27
+htmlmin==0.1.12
+python-magic-bin==0.4.14
+html5lib==1.1
