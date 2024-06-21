@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join theTrendWave Community.Explore a world of creativity, entertainment">
+    <title>TrendWave/Log in</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+</head>
+<style>
+   form{
+    align-content: center;
+   }
+   .btn-field a:hover{
+    color: maroon;
+    text-decoration: underline;
+   }
+   h1{
+    font-family: 'Bree Serif', serif;
+    color: #000; /* Your desired color */
+    }
+</style>
+<body>
+    {% block content %}
+    <div class="container-fluid bg-light">
+        <h1>
+            <a href="{% url 'homepage' %}" class="text-decoration-none">
+                    <h1 class="navbar-brand text-dark">TrendWave</h1>
+            </a>
+        </h1>
+    </div>
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show text-warning" role="alert">
+        <strong class="text-danger">{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close">
+            <!--<span aria-hidden="true" >&times;</span>-->
+        </button>
+    </div>
+    {% endfor %}
+    <form action="{% url 'signIn' %}" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <div class="form-box">
+                <h2 id="title">Sign In</h2>
+                <h6 class="text-center">Don't have an account? <span class="text-success"><a href="{% url 'signup' %}" class="text-decoration-none">Sign up</a></span></h6>
+                <div class="mt-3 mb-3 name-field">
+                    <label for="username" class="form-label">Username:</label>
+                    <input type="text" name="username" class="form-control" id="username" placeholder="Enter Username" required>
+                </div>
+                <div class="mb-3 input-field">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" name="password" class="form-control" id="passwordd" placeholder="Create Password" required>
+                </div>
+                <div class="btn-field">
+                    <input type="hidden" name="next" value="/{{ next_url }}">
+                    <button type="submit" class="btn btn-primary w-100%">Login</button>
+                    <a href="#" class="text-decoration-none">Forgot Password</a>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    {% endblock %}
+</body>    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</html>

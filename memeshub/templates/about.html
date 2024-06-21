@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <title>About TrendWave</title>
+</head>
+<style>
+    body {
+        position: relative;
+    }
+
+    div.text-white {
+        padding: 100px 10px;
+        margin: 0;
+        margin-top: -3px;
+    }
+    .cta-banner#developer {
+        align-items: center;
+        justify-content: center;
+    }
+    h1{
+    font-family: 'Bree Serif', serif;
+    color: #fff; /* Your desired color */
+    }
+      body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    p {
+      font-size: 18px;
+    }
+    .mission, .offer, .community {
+      margin-bottom: 50px;
+    }
+</style>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    {% block content %}
+    <div class="navbar navbar-expand-lg bg-dark navabr-dark fixed-top py-0">
+        <div class="container-fluid sticky-top">
+            <h1>
+                <a href="{% url 'homepage' %}" class="text-decoration-none">
+                    <h1 class="navbar-brand text-light">TrendWave</h1>
+                </a>
+            </h1>
+            <ul class="nav ml-auto text-light">
+                <li class="nav-item text-secondary">
+                    <a href="#contact_support" class="nav-link ">Contact Support</a>
+                </li>
+                <li class="nav-item text-secondary">
+                    <a href="#feedback" class="nav-link ">Feedback</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <br></br>
+    <hr>
+    <div class="cta-banner" id="about">
+        <div class="container-fluid py-3">
+            <div class="row">
+                <h1 class="display-6 text-center" style="color: darkorchid;">About TrendWave</h1>
+                <div class="col-sm-12 pb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Our Mission</h2>
+                            <p class="card-text">Our mission at TrendWave is simple: to keep you in the loop with what's
+                                capturing the internet's attention right now. Whether it's the latest dance challenge
+                                sweeping social media or the funniest meme making the rounds, we're dedicated to bringing
+                                you the freshest and most engaging content that the online world has to offer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 pb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">What We Offer</h2>
+                            <p class="card-text">Dive into TrendWave, and you'll find a curated selection of trending
+                                topics, viral videos, and hilarious memes—all handpicked to keep you entertained and
+                                informed. Our platform is your go-to source for discovering new trends, joining in on viral
+                                challenges, and sharing your own creative content with the world.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 pb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Explore, Engage, and Connect</h2>
+                            <p class="card-text">At TrendWave, we believe that trends are more than just fleeting
+                                fads—they're opportunities for connection and creativity. That's why we encourage our
+                                community members to explore, engage, and connect with each other as they ride the waves of
+                                trends together. Whether you're a content creator looking to make your mark or a trendsetter
+                                eager to share the next big thing, TrendWave is your platform to shine.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12  pb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Join the TrendWave Community</h2>
+                            <p class="card-text">Ready to dive into the world of TrendWave? Join our community today to stay
+                                up-to-date with the latest trends, connect with like-minded individuals, and unleash your
+                                creativity like never before. Whether you're here to laugh, dance, or simply explore,
+                                there's a wave waiting for you at TrendWave.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 pb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Let's Ride the Wave Together</h2>
+                            <p class="card-text">Join us at TrendWave as we navigate the ever-changing currents of the
+                                online world. Together, we'll surf the waves of trends, discover new horizons of creativity,
+                                and make a splash in the digital ocean. Welcome aboard—it's time to ride the wave of
+                                tomorrow's trends today.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pb-4">
+        <h3 id="contact_support">Contact Support</h3>
+        <p>For any queries and services contact us via <a href="mailto:smemeshub@gmail.com" class="text-info">smemehub@gmail.com</a></p>
+        <br>
+        <h3 id="feedback">Feedback</h3>
+        <p><a href="mailto:smemeshub@gmail.com" class="text-danger">Send Feedback</a></p>
+    </div>
+    <br>
+    {% endblock %}
+    {% include "footer.html" %}
+    <script src="{% static 'check-connection.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

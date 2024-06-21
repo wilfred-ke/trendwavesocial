@@ -1,0 +1,138 @@
+div#divOne {
+    position: sticky;
+}
+
+#id_sidebar {
+    position: fixed;
+    width: 350px;
+    overflow-y: hidden;
+    top: 10%;
+    bottom: 0;
+}
+
+.sidebar-item {
+    padding: 10px;
+}
+
+/* Hover effect */
+.sidebar-item:hover {
+    border-right: 1px solid #e4dddd;
+}
+
+/* Border between sidebar and main body */
+.container-fluid {
+    border-right: 1px solid #faf6f6;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-right: 5px;
+    border: 1px solid transparent;
+
+}
+
+.nav-link:hover {
+    background-color: #f7f1f1;
+}
+
+#sidebarId {
+    font-family: 'Bree serif', serif;
+    color: rgb(7, 7, 7);
+}
+
+.material-icons.liked {
+    color: maroon;
+}
+.material-icons.not-liked {
+    color: black;
+}
+#exploreId{
+    margin-left: 5px;
+}
+ .sidebar {
+     transition: transform 0.3s ease-in-out;
+ }
+
+ .sidebar.hidden {
+     transform: translateX(-100%);
+ }
+
+ /* cookies */
+ .cookie-consent-banner {
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     z-index: 9999;
+ }
+div.modal#cookieSettingsModal{
+    z-index: 20000;
+}
+ @media (max-width: 767.98px) {
+     .cookie-consent-banner .container {
+         flex-direction: column;
+     }
+ }
+ 
+ /* Share Modal */
+ .share-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+ }
+
+ .share-modal-content {
+     background-color: #fefefe;
+     margin: auto;
+     padding: 20px;
+     border: 1px solid #888;
+     width: 300px;
+     /* Fixed width for better structure */
+     text-align: center;
+     position: relative;
+ }
+
+ .close-button {
+     color: #aaa;
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     font-size: 28px;
+     font-weight: bold;
+ }
+
+ .close-button:hover,
+ .close-button:focus {
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+ }
+
+ .list-group-item {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .mt-3 {
+     margin-top: 1rem;
+ }
+/* Additional margin for buttons */
+.list-group-item .list-group-item-action {
+    margin-bottom: 10px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
